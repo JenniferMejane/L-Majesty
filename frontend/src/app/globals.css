@@ -1,26 +1,52 @@
-@import "tailwindcss";
+@import "tailwindcss/preflight";
+@import "tailwindcss/utilities";
 
+/* === Light Mode Variables === */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #ededed; /* antiflash-white */
+  --foreground: #11296b; /* royal-blue-traditional */
+
+  --primary: #11296b;
+  --primary-contrast: #ffffff;
+
+  --secondary: #005fb8;
+  --accent: #77a6d3;
+
+  --warning: #ffe999;
+  --highlight: #ffd633;
+
+  --card: #ffffff;
+  --muted: #d1d5db;
+  --muted-foreground: #4b5563;
+
+  --font-sans: var(--font-geist-sans, Arial, sans-serif);
+  --font-mono: var(--font-geist-mono, monospace);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* === Dark Mode Variables === */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --primary: #77a6d3;
+    --primary-contrast: #0a0a0a;
+
+    --secondary: #ffe999;
+    --accent: #005fb8;
+
+    --warning: #ffd633;
+    --highlight: #ffe999;
+
+    --card: #1a1a1a;
+    --muted: #3d3d3d;
+    --muted-foreground: #a1a1aa;
   }
 }
 
+/* === Global Body Styles === */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
