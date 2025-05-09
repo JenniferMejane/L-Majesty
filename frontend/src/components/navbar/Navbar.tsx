@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import {
   AppBar,
@@ -119,7 +120,7 @@ const Navbar: React.FC = () => {
                   textDecoration: "none",
                 }}
               >
-                UniConnect
+                L-Majesty
               </Typography>
             </Link>
           </Box>
