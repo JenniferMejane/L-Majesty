@@ -120,7 +120,7 @@ const Navbar: React.FC = () => {
                   textDecoration: "none",
                 }}
               >
-                UniConnect
+                L-Majesty
               </Typography>
             </Link>
           </Box>
